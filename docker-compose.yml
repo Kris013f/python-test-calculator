@@ -1,11 +1,14 @@
+# docker compose up -d
+# docker exec -it jenkins-docker-container cat var/jenkins_home/secrets/initialAdminPassword
+
 services:
 
   #--- jenkinsBlue_moje ------------------------------------------------------------------------------------------------
   jenkins-docker-container:
     container_name: jenkins-docker-container
     image: jenkins-docker-image
-    build:                                # https://jtreminio.com/blog/running-docker-containers-as-current-host-user/
-      context: .                          # current dir as build context
+    build:
+      context: .
       dockerfile: JenkinsDockerfile
 
     environment:
