@@ -9,7 +9,7 @@ services:
     image: jenkins-docker-image
     build:
       context: .
-      dockerfile: JenkinsDockerfile
+      dockerfile: Dockerfile.Jenkins
 
     environment:
       - TERM=xterm-color
